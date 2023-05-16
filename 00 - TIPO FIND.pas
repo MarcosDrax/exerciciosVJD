@@ -1,4 +1,4 @@
-//exercicio 00 - TIPO FIND
+///exercicio 00 - TIPO FIND
 
 Readln(s); 
 While Readln(s) <> EOF do Begin
@@ -8,9 +8,9 @@ media:= 3.0;
 	ClearFields(PAGE1,REC1);
 		For i:= 0 to 2 do Begin
 			if  sub_tot <> media then Begin 
-				sub_tot:= GetFloat(S,3+(i*3),0)+sub_tot;
+				sub_tot:= GetFloat(S,19+(i*19),11)+sub_tot;
 				PAGE1.REC1.CAMPO[1]:= 'REGISTRO';
-				PAGE1.REC1.CAMPO[2]:= getstring(s,1,0);
+				PAGE1.REC1.CAMPO[2]:= getstring(s,1,16);
 				PAGE1.REC1.CAMPO[3]:= FormatFloat((sub_tot)/media,'9.999,99');
 			end else begin 
 				break;
