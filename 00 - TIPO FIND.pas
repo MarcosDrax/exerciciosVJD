@@ -16,7 +16,8 @@ media:= 3.0;
 				break;
 			end;
 		end;	
-
-
-
 	WriteRecord(PAGE1,REC1);
+	EndPage(PAGE1);
+Markup();
+End;
+Convert(3,true,false,false,0,false);
