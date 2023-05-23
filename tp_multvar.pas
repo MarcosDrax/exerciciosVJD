@@ -4,7 +4,7 @@ linha := '';
 Readln(s);
 	while Readln(s) <> eof do begin
 linha:= multlineAdd(linha,s);
-		if getstring(s,1,0) = id then begin
+		if (getstring(s,1,0) = id) or (getstring(s,1,0) <> id) then begin
 
 			BeginPage(PAGE1);
 			ClearFields(PAGE1,REC1);
