@@ -16,7 +16,7 @@ end;
 BeginPage(PAGE1);
 ClearFields(PAGE1,REC1);
 
-	PAGE1.REC1.CAMPO[1]:=' TAMANHO : '+FormatFloat(tamanho,'9');
+	PAGE1.REC1.CAMPO[1]:= FormatFloat(tamanho,'9');
 
 WriteRecord(PAGE1,REC1);
 EndPage(PAGE1);
