@@ -3,8 +3,7 @@
 C:='';
 P:='';
 soma := 0;
-While Readln(s) <> EOF do
-Begin
+While Readln(s) <> EOF do Begin
 soma:= soma+1;
 		if getstring(s,1,1) = 'C' then Begin
 		C:= S;
