@@ -1,3 +1,7 @@
 *.bak
 
+<<<<<<< HEAD
 *.vjr
+=======
+*.vjr
+>>>>>>> ffd4718f84eb0651fb3668fee07bcdfd3eff2794
