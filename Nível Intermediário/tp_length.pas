@@ -11,7 +11,7 @@ end;
 	BeginPage(PAGE1);
 	ClearFields(PAGE1,REC1);
 
-			PAGE1.REC1.CAMPO[1]:= FormatFloat((cont),'9999');
+			PAGE1.REC1.CAMPO[1]:= FormatFloat((cont),'9');
 		
 	WriteRecord(PAGE1,REC1);
 	EndPage(PAGE1);
