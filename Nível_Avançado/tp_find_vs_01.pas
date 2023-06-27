@@ -70,7 +70,7 @@ While ReadLn(S) <> EOF do Begin
 	end;
 	t_valor_4:= StrToFloat(getstring(s,cont+5,7))/100;
 	cont    := 0;
-	{abort(valor_2);}
+
 	total   := (t_valor+t_valor_1+t_valor_2+t_valor_3+t_valor_4);
 	total_media   := (t_valor+t_valor_1+t_valor_2+t_valor_3+t_valor_4)/3;
 
