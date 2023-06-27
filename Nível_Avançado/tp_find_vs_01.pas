@@ -29,7 +29,6 @@ While ReadLn(S) <> EOF do Begin
 	end;
 	t_valor:= StrToFloat(getstring(s,cont+3,6))/100;
 	cont    := 0;
-	{abort(valor);}
 	
 	for i:= 0 to 99 do begin
 		if subStr(s,i+1,3) = 'IPU' then begin
@@ -73,7 +72,6 @@ While ReadLn(S) <> EOF do Begin
 
 	total   := (t_valor+t_valor_1+t_valor_2+t_valor_3+t_valor_4);
 	total_media   := (t_valor+t_valor_1+t_valor_2+t_valor_3+t_valor_4)/3;
-
 
 	BeginPage(PAGE1);
 	ClearFields(PAGE1,REC1);
