@@ -71,7 +71,7 @@ While ReadLn(S) <> EOF do Begin
 	cont    := 0;
 
 	total   := (t_valor+t_valor_1+t_valor_2+t_valor_3+t_valor_4);
-	total_media   := (t_valor+t_valor_1+t_valor_2+t_valor_3+t_valor_4)/3;
+	total_media   := (total)/3;
 
 	BeginPage(PAGE1);
 	ClearFields(PAGE1,REC1);
