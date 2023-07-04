@@ -6,7 +6,6 @@ total  :=0.0;
 valor  :=0.0;
 valor_1:=0.0;
 valor_2:=0.0;
-
 	for g:= 0 to 99 do begin
 		if substr(teste,g+1,1) = ',' then break;
 		cont:= cont+1;
