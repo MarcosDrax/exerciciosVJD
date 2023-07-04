@@ -29,19 +29,19 @@ valor_2:=0.0;
 	valor_2:= getfloat(teste,cont-3,6);
 	//abort(valor_2);
 total:= (valor+valor_1+valor_2);
-media_vlr:=total/media;	
+media_vlr:=total/media;
+	if total < media_vlr then begin
+		mensagem:=  'O valor Total e maior que a taxa.';
+		end else begin
+		mensagem:=  'O valor Total e menor que a taxa.';
+	end;	
  BeginPage(PAGE1);
  ClearFields(PAGE1,REC1);
-
    PAGE1.REC1.CAMPO[1]:=  formatfloat(valor,'999,99');
    PAGE1.REC1.CAMPO[2]:=  formatfloat(valor_1,'999,99');
    PAGE1.REC1.CAMPO[3]:=  formatfloat(valor_2,'999,99');
    PAGE1.REC1.CAMPO[4]:=  'Taxa - R$'+formatfloat(media_vlr,'999,99');
-	if total < media_vlr then begin
-		PAGE1.REC1.CAMPO[5]:=  'O valor Total e maior que a taxa.';
-		end else begin
-		PAGE1.REC1.CAMPO[5]:=  'O valor Total e menor que a taxa.';
-	end;
+	PAGE1.REC1.CAMPO[5]:=  mensagem;
  WriteRecord(PAGE1,REC1);
  EndPage(PAGE1);
 end;
