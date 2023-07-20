@@ -3,7 +3,7 @@ registro  := 2;
 bloco     := 0;
 cont      := 1;
 
-for i:= INI to FIM do begin
+for i:= INI to FIM do begin {}
 bloco := bloco + 1;
 
 	BeginPage(PAGE1);
@@ -20,11 +20,11 @@ bloco := bloco + 1;
 				BeginPage(SEPARADOR);
 				ClearFields(SEPARADOR,REC1);			
 				
-					  SEPARADOR.REC1.AVISO:= Formatfloat((cont),'9');
+					  SEPARADOR.REC1.AVISO:= Formatfloat((cont),'9'); {o bloco ja inicia com o numero 1 pois ja foi declarado na variavel este de iniciar o "for"}
 				
 				WriteRecord(SEPARADOR,REC1);
 				EndPage(SEPARADOR);
-				cont  := cont + 1;
+				cont  := cont + 1; {após o primeiro loop a variavel 'cont := 1' recebe 'cont +1' tornando '2' ..., e assim sucessivamente até terminar a contagem do 'for' e gerando a numeração dos blocos}
 		//abort('Quantidade: '+formatFloat(CONT,'9'));		
 		end;
        
