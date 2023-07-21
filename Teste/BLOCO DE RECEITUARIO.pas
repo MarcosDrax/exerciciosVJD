@@ -1,12 +1,13 @@
 //BLOCO DE RECEITA
+
 registro  := 2;
 bloco     := 0;
 cont      := 1;
 
-{a função do 'FOR' ele ira repetir a quantidade selecionada pelo usuario, e após cada quantidade selecionada pelo usuario ela fica armazenada dentro da variavel bloco, que depois ela e zerada
-para receber um }
-for i:= INI to FIM do begin 
-bloco := bloco + 1;
+{FOR recebe inicial = INI e final = FIM }
+For i:= INI to FIM do begin 
+bloco := bloco + 1; 
+{bloco recebe valor de cada looping e depois zera}
 
 	BeginPage(PAGE1);
 	ClearFields(PAGE1,REC1);
@@ -17,24 +18,26 @@ bloco := bloco + 1;
 	WriteRecord(PAGE1,REC1);
 	EndPage(PAGE1);
  
-		{no segundo 'IF' ele verifica a quantidade de blocos se esta igual a quantidade digitada pelo usuario, se quantidade estiver de acordo, o programa coloca a pagina separador e mais a informação 
-  		'cont' que armazena a quantidade de blocos assinm numerando os blocos}
+		{'IF' compara com quantidade digitada pelo usuario, estando de acordo o programa coloca a pagina separador e mais a informação 'cont' que armazena a quantidade de blocos assinm numerando os blocos}
 		
-  		if bloco = QUANT then begin
+  		If bloco = QUANT then begin
 			
 				BeginPage(SEPARADOR);
 				ClearFields(SEPARADOR,REC1);			
-				
+			
 					  SEPARADOR.REC1.AVISO:= Formatfloat((cont),'9'); {o bloco ja inicia com o numero 1 pois ja foi declarado na variavel este de iniciar o "for"}
-				
+			
 				WriteRecord(SEPARADOR,REC1);
 				EndPage(SEPARADOR);
-				cont  := cont + 1; {após o primeiro loop a variavel 'cont := 1' recebe 'cont +1' tornando '2' ..., e assim sucessivamente até terminar a contagem do 'for' e gerando a numeração dos blocos}
-		//abort('Quantidade: '+formatFloat(CONT,'9'));		
+				cont  := cont + 1; 
+    			{após o primeiro loop a variavel 'cont := 1' recebe 'cont +1' tornando '2' ..., e assim sucessivamente até terminar a contagem do 'for' e gerando a numeração dos blocos}
+				{abort('Quantidade: '+formatFloat(CONT,'9'));}		
+
+		bloco := 0; {variavel que a zera a informação}
 		end;
-       
-	if bloco = QUANT then 
-	bloco := 0;//variavel que a zera a informação 
-	markup;
+   	markup;
 end;
 Convert(registro,true,false,false,QUANT*registro,false);
+
+{funcao(argumento1,argumento2,argumentoN...)
+argumento com valor = paramentro}
