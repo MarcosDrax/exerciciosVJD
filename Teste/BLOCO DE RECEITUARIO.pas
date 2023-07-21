@@ -3,7 +3,9 @@ registro  := 2;
 bloco     := 0;
 cont      := 1;
 
-for i:= INI to FIM do begin {}
+{a função do 'FOR' ele ira repetir a quantidade selecionada pelo usuario, e após cada quantidade selecionada pelo usuario ela fica armazenada dentro da variavel bloco, que depois ela e zerada
+para receber um }
+for i:= INI to FIM do begin 
 bloco := bloco + 1;
 
 	BeginPage(PAGE1);
@@ -14,8 +16,11 @@ bloco := bloco + 1;
 
 	WriteRecord(PAGE1,REC1);
 	EndPage(PAGE1);
-	
-		if bloco = QUANT then begin
+ 
+		{no segundo 'IF' ele verifica a quantidade de blocos se esta igual a quantidade digitada pelo usuario, se quantidade estiver de acordo, o programa coloca a pagina separador e mais a informação 
+  		'cont' que armazena a quantidade de blocos assinm numerando os blocos}
+		
+  		if bloco = QUANT then begin
 			
 				BeginPage(SEPARADOR);
 				ClearFields(SEPARADOR,REC1);			
