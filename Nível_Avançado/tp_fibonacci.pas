@@ -8,7 +8,7 @@ fibo     :='';
 log:= CreateFileLog('Fibonacci.txt');
 
 		For j:= 0 to 9 Do Begin
-			fibonacci:=inttostr(vlr_1);
+			 
 			vlr_3:= vlr_1+vlr_2;
 			vlr_1:=vlr_2;
 			vlr_2:=vlr_3;
