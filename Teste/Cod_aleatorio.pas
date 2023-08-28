@@ -18,3 +18,5 @@ ClearFields(PAGE1,REC1);
 WriteRecord(PAGE1,REC1);
 EndPage(PAGE1);
 
+
+
