@@ -1,6 +1,6 @@
 // +-----------------------------------+
 // | Desenvolvedor: MARCOS - versão_02 |
-// | Atualização:  08/09/2023- 17:37pm |
+// | Atualização:  08/09/2023- 18:11pm |
 // | Programa:exercicio 09 - TP_ALEAT  |
 // +-----------------------------------+
 //variaveis declaradas------------------------+
