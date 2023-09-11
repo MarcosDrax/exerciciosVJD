@@ -1,6 +1,6 @@
 // +-----------------------------------+
 // | Desenvolvedor: MARCOS - versão_02 |
-// | Atualização:  10/09/2023- 17:37pm |
+// | Atualização:  11/09/2023- 09:32am |
 // | Programa:exercicio 09 - TP_ALEAT  |
 // +-----------------------------------+
 //variaveis declaradas------------------------+
@@ -119,7 +119,7 @@ ClearFields(PAGE1,REC1);
 		//função criada para encontrar a sexta Letra.			
 			for m:= 0 to 29 do Begin 			
 				IF BUSCA5 = 0 then begin
-					if substr(saida_reser,m+1,1) = 'o' then begin
+					if substr(saida_reser,m+1,1) = 's' then begin
 						BUSCA5 := 1;
 						linha5:= FormatFloat(linhas,'99');												
 						break						
