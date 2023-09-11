@@ -1,6 +1,6 @@
 // +-----------------------------------+
 // | Desenvolvedor: MARCOS - versão_02 |
-// | Atualização:  08/09/2023- 18:11pm |
+// | Atualização:  10/09/2023- 17:37pm |
 // | Programa:exercicio 09 - TP_ALEAT  |
 // +-----------------------------------+
 //variaveis declaradas------------------------+
@@ -64,7 +64,7 @@ ClearFields(PAGE1,REC1);
 						linha1:= FormatFloat(linhas,'99');												
 						break						
 					end else begin
-						cont1:=cont1+1;
+						cont1:=cont1+1; 
 						if cont1 = 30 then begin
 						cont1:=0;
 						end;						
